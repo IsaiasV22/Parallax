@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import video from './assets/FPO_ChipSequence.mp4';
+import prueba from './assets/DESKTOP-SHORT.mp4';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: "100%", display: "block"}}>
+      <div className='w-full h-[650vh] md:h-[520vh] relative mt-[-137px] z-0'>
+        <div className='w-full h-screen sticky left-0 top-0 z-0'>
+          <video className='w-full h-full object-cover absolute left-0 top-0 z-[-2]' playsInline muted controls>
+            <source src={prueba} type='video/mp4'/>
+          </video>
+        </div>
+      </div>
     </div>
   );
 }
