@@ -1,9 +1,24 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
 import video from './assets/FPO_ChipSequence.mp4';
 import prueba from './assets/DESKTOP-SHORT.mp4';
 
 function App() {
+  useEffect(() => {
+    function handleScroll() {
+      const video = document.querySelector('video');
+      const e = window.scrollY / (document.body.clientHeight - window.innerHeight)
+      , r = video.duration * e;
+      video.currentTime = r;
+    }
+    return window.addEventListener("scroll", handleScroll, {
+      passive: !0
+    }),
+    () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
   return (
     <div style={{width: "100%", display: "block"}}>
       <div className='w-full h-[650vh] md:h-[520vh] relative mt-[-137px] z-0'>
