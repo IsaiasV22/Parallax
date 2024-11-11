@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.transition-opacity {
+  transition-duration:.15s;transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1)
+}
+
+.ease-in-out{
+  animation-timing-function:cubic-bezier(.4,0,.2,1)
+}
+
+.duration-300{
+  animation-duration:.3s
+}
